@@ -12,6 +12,7 @@ def about(request):
      return render(request, 'about.html', {})
  
 def login_user(request):
+    return render(request, ('login.html'))
     if request.method == "POST":
         username = request.POST['username']
         [password] = request.POST['password']
@@ -22,7 +23,7 @@ def login_user(request):
             return redirect('home')
     
     else:
-        messages.success(request, ('An Error occured'))
+        messages.success(request, ('An Error occurred'))
         return redirect('login')
         
     return render(request, 'login.html', {})
