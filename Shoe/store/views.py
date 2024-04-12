@@ -9,9 +9,9 @@ from django import forms
 
 # Create your views here.
 def category(request, foo):
-    foo == foo.replace('-' '')
+   
     try:
-        category = category.objects.get(name=foo)
+        Category = Category.objects.get(name=foo)
         products = Product.objects.filter(category = category)
         return render(request, 'category.html', {'products': products, 'category':category})
     except:

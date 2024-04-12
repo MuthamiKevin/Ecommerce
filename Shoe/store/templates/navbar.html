@@ -12,7 +12,6 @@
 {% else %}
     <li class="nav-item"><a class="nav-link" href="{% url 'login'%}">Login</a></li>
 
-    <li class="nav-item"><a class="nav-link" href="{% url 'register'%}">Register</a></li>
 {% endif %}
 
                 <li class="nav-item dropdown">
@@ -21,11 +20,11 @@
                         <li><a class="dropdown-item" href="{% url 'home'%}">All Products</a></li>
                         <li><hr class="dropdown-divider" /></li>
                         <li><a class="dropdown-item" href="{% url 'category' 'sporty' %}">Sporty</a></li>
-                        <li><a class="dropdown-item" href="#!">Casual</a></li>
-                        <li><a class="dropdown-item" href="#!">Workout</a></li>
-                        <li><a class="dropdown-item" href="#!">Official</a></li>
-                        <li><a class="dropdown-item" href="#!">Boots</a></li>
-                        <li><a class="dropdown-item" href="#!">Sandals</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'casual' %}">Casual</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'workout' %}">Workout</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'official' %}">Official</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'boots' %}">Boots</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'sandals' %}">Sandals</a></li>
                     </ul>
                 </li>
             </ul>
