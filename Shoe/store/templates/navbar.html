@@ -16,12 +16,16 @@
 {% endif %}
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Category </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">All Products</a></li>
+                        <li><a class="dropdown-item" href="{% url 'home'%}">All Products</a></li>
                         <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                        <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                        <li><a class="dropdown-item" href="{% url 'category' 'sporty' %}">Sporty</a></li>
+                        <li><a class="dropdown-item" href="#!">Casual</a></li>
+                        <li><a class="dropdown-item" href="#!">Workout</a></li>
+                        <li><a class="dropdown-item" href="#!">Official</a></li>
+                        <li><a class="dropdown-item" href="#!">Boots</a></li>
+                        <li><a class="dropdown-item" href="#!">Sandals</a></li>
                     </ul>
                 </li>
             </ul>
