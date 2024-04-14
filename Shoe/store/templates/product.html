@@ -30,19 +30,38 @@
                 
               {% else %}
                 ${{product.price}}
-                <br/> ID: {{product.id}}
+                <br/> 
               {% endif %}
               <br/>
               <br/>
               <a href="{% url 'home'%}" class="btn btn-secondary"> Home</a>
-                </center>
+              <button type="button"value="{{product.id}}"class="btn btn-secondary" id="add-cart"> Add to cart </button>
+              </center>
             </div>
           </div>
         </div>
       </div>
 <br/><br/>
 <br/><br/>
-
-
 </div>
+<script>
+  $(document).on('click', '#add-cart', function(e){
+    e.preventDefault();
+    $.ajax({
+        type:'POST',
+        url:'{% url 'card_add'%}',
+        data: {
+          product_id: $('#add-cart').val(),
+          crsfmiddlewaretoke:'{{crsf_token}}',
+          action:'POST'
+        },
+        success.function(json){
+          console.log(json)
+        },
+        error: function(xhr,errmsg, err){
+          
+        }
+    });
+  })
+</script>
 {% endblock %}
