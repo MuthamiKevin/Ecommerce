@@ -17,3 +17,4 @@ class Cart():
             pass
         else:
             self.cart[product_id] = {'price': str(product.price)}
+            self.session.modified = True
