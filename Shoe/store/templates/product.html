@@ -49,10 +49,10 @@
     e.preventDefault();
     $.ajax({
         type:'POST',
-        url:'{% url 'card_add'%}',
+        url:'{% url 'cart_add'%}',
         data: {
-          product_id: $('#add_cart').val(),
-          crsfmiddlewaretoke:'{{crsf_token}}',
+          product_id: $('#add-cart').val(),
+          crsfmiddlewaretoken:'{{crsf_token}}',
           action:'POST'
         },
         success.function(json){
